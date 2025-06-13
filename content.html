@@ -22,7 +22,8 @@
         <img src="img/musical.png" class="musical-notes mn1">
         <img src="img/musical.png" class="musical-notes mn2">
         <img src="img/musical.png" class="musical-notes mn3">
-        <div class="back-text">
+        <div class="testt">
+          <div class="back-text">
             <span></span>
             <p class="music-text">Às vezes no silêncio da noite
 Eu fico imaginando nós dois
@@ -48,6 +49,19 @@ Ou você me engana, ou não está madura
 Iê-iê-iê-iê-iê, onde está você agora? (Aqui!)</p>
         <img src="img/coracao.png" class="corazon">
         </div> 
+        <div class="toggle-cont">
+          <input class="toggle-input" id="toggle" name="toggle" type="checkbox" />
+          <label class="toggle-label" for="toggle">
+            <div class="cont-label-play">
+              <span class="label-play"></span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Áudio da música -->
+        <audio id="audio-musica" src="img/sozinho.mp3"></audio>
+      </div>
+        
         <div class="back-video">
             <div class="back"><span></span></div>
             <video class="video"controls controlsList="nodownload">
@@ -108,6 +122,16 @@ Iê-iê-iê-iê-iê, onde está você agora? (Aqui!)</p>
   Seu navegador não suporta áudio.
 </audio>
 <script>
+  document.getElementById('toggle').addEventListener('change', function () {
+    const audio = document.getElementById('audio-musica');
+
+    if (this.checked) {
+      audio.play().catch(() => {});
+    } else {
+      audio.pause();
+    }
+  });
+
 /* ---------------- FUNÇÃO GENÉRICA ------------------ */
 function abrirOverlay(tipo, dados = {}) {
   // cria overlay
