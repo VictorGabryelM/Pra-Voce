@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 007</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-bubbles"></div>
+
+    <div class="head">
+        <h1 class="title">Seja bem-vinda a um cantinho feito com carinho.</h1>
+        <img src="img/coracao.png" alt="">
+    </div> 
+    <div class="box">
+        <div class="bolinha"></div>
+        <div class="bolinha pequena"></div>
+        <div class="back"><span></span></div>
+        <img class="img" src="img/WhatsApp Image 2025-06-11 at 14.10.26.jpeg">
+        <img src="img/musical.png" class="musical-notes">
+        <img src="img/musical.png" class="musical-notes mn1">
+        <img src="img/musical.png" class="musical-notes mn2">
+        <img src="img/musical.png" class="musical-notes mn3">
+        <div class="back-text">
+            <span></span>
+            <p class="music-text">Às vezes no silêncio da noite
+Eu fico imaginando nós dois
+Eu fico ali sonhando acordado
+Juntando o antes, o agora e o depois
+Por que você me deixa tão solto?
+Por que você não cola em mim?
+Tô me sentindo muito sozinho
+Não sou nem quero ser o seu dono
+É que um carinho às vezes cai bem
+Eu tenho os meus desejos e planos secretos
+Só abro pra você, mais ninguém
+Por que você me esquece e some?
+E se eu me interessar por alguém?
+E se ela, de repente, me ganha?
+Quando a gente gosta, é claro que a gente cuida
+Fala que me ama, só que é da boca pra fora
+Ou você me engana, ou não está madura
+Onde está você agora? (Aqui, ó!)
+Quando a gente gosta, é claro que a gente cuida
+Fala que me ama, só que é da boca pra fora
+Ou você me engana, ou não está madura
+Iê-iê-iê-iê-iê, onde está você agora? (Aqui!)</p>
+        <img src="img/coracao.png" class="corazon">
+        </div> 
+        <div class="back-video">
+            <div class="back"><span></span></div>
+            <video class="video"controls controlsList="nodownload">
+                <source src="img/video.mp4" type="video/mp4">
+                Seu navegador não suporta vídeo.
+            </video>
+            <div class="comment">
+                <p class="comment-text">Você provavelmente não tá entendendo nada no vídeo, mas era só eu tentando gravar o momento em que joguei meu pod no açude. Tinha parado pra pensar e percebi que tem coisas que faço que acabam te incomodando. Então decidi parar com essas coisas, tipo fumar, beber demais e frequentar uns lugares que não fazem bem, porque não quero fazer nada que deixe você desconfortável ou me faça parecer outra pessoa.</p>
+            </div>
+            <img src="img/coracao.png" class="corazon">
+        </div>
+        <div class="photo">
+            <div class="back"><span></span></div>
+            <img src="img/foto.jpeg" class="photo-img">
+            <img src="img/coracao.png" class="corazon">
+        </div>
+        <div class="unravel">
+          <div class="back"><span></span></div>
+          <img src="img/UnravelTwo.jpeg" class="img">
+          <img src="img/coracao.png" class="corazon">
+          <img src="img/coracao.png" class="corazon txt">
+          <div class="back-text">
+            <p class="text">Unravel é um jogo com uma mecânica parecida com a daquele jogo do Roblox, que tinha uma corda ligando os personagens, que jogamos uma vez na escola. Além de ser mais legal, ele não é tão bugado kkkkk. Eu comprei, então se você quiser também, dá pra gente jogar juntos.</p>
+          </div>
+        </div>
+        <div class="together">
+          <div class="back"><span></span></div>
+          <img src="img/together.png" alt="">
+        </div>
+        <div class="invite">
+          <div class="blackbox">
+            <h1>Procurando imagem…
+Nada encontrado. Talvez porque ainda não saímos pra tirar uma?
+
+O que você acha da gente sair sábado à noite, comer alguma coisa e finalmente tirar essa foto pra colocar aqui?</h1>
+            <div class="buttons">
+              <button onclick="location.href='https://wa.me/5586995540757?text=Acho%20que%20a%20gente%20pode%20resolver%20esse%20%27erro%20404%20da%20foto%27%20no%20s%C3%A1bado...'">Sim :)</button>
+              <button onclick="document.body.innerHTML = '';">NÂO</button>
+            </div>
+
+          </div>
+        </div>
+          <footer class="notas-finais">
+            <h2>Notas finais – Notas do criador</h2>
+            <p>Oi, Fran.</p>
+            <p>Espero que você tenha gostado do site :)</p>
+            <p>Ele foi feito pra você. Não ficou lá essas coisas (até porque você merece muito mais), mas foi o que consegui fazer com o tempo e as ferramentas que tinha.</p>
+            <p>Não espero que aceite o convite — mas espero muito que você goste desse pequeno site :)</p>
+            <p class="privado">Ah, e evita compartilhar com algumas pessoas… tem a parte que fala que eu fumava 😅</p>
+            <p class="assinatura">Com carinho,<br>Victor</p>
+          </footer>
+
+
+    </div>
+    <audio id="kiss-audio" preload="auto">
+  <source src="img/kiss.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+    <audio id="photo-audio" preload="auto">
+  <source src="img/Legião Urbana · Tempo perdido.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+<script>
+/* ---------------- FUNÇÃO GENÉRICA ------------------ */
+function abrirOverlay(tipo, dados = {}) {
+  // cria overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'image-overlay';
+
+  // botão fechar
+  const closeBtn = document.createElement('button');
+  closeBtn.textContent = '×';
+  closeBtn.className = 'close-button';
+  closeBtn.onclick = fechar;
+  overlay.appendChild(closeBtn);
+
+  // conteúdo dinâmico
+  switch (tipo) {
+    case 'imagem': {
+      const img = document.createElement('img');
+      img.src = dados.src;
+      overlay.appendChild(img);
+      break;
+    }
+    case 'video': {
+      const video = document.createElement('video');
+      video.src = dados.src;
+      video.controls = true;
+      video.autoplay = true;
+      video.loop = true;
+      overlay.appendChild(video);
+      break;
+    }
+  }
+
+  // fecha ao clicar fora
+  overlay.addEventListener('click', e => { if (e.target === overlay) fechar(); });
+
+  // travar rolagem e inserir overlay
+  document.body.appendChild(overlay);
+  document.body.classList.add('modal-open');
+
+  function fechar() {
+    overlay.remove();
+    document.body.classList.remove('modal-open');
+    if (dados.audio) { dados.audio.pause(); dados.audio.currentTime = 0; }
+  }
+}
+
+/* --------------- GATILHOS EXISTENTES --------------- */
+// 1) foto principal (kiss‑audio)
+document.querySelector('.box .img').addEventListener('click', function () {
+  const audio = document.getElementById('kiss-audio');
+  abrirOverlay('imagem', { src: this.src, audio });
+  audio.currentTime = 0;
+  audio.play().catch(()=>{});
+});
+
+// 2) foto “photo-img” (photo‑audio)
+document.querySelector('.photo-img').addEventListener('click', function () {
+  const audio = document.getElementById('photo-audio');
+  abrirOverlay('imagem', { src: this.src, audio });
+  audio.currentTime = 0;
+  audio.play().catch(()=>{});
+  
+});
+
+/* --------------- NOVOS GATILHOS -------------------- */
+// 3) Unravel → vídeo
+document.querySelector('.unravel .img').addEventListener('click', function () {
+  abrirOverlay('video', { src: 'img/un.mp4' }); // troque pelo caminho real
+});
+
+// 4) Together → imagem ampliada
+document.querySelector('.together img').addEventListener('click', function () {
+  abrirOverlay('imagem', { src: this.src });
+});
+
+/* -------------- BOLHAS DE FUNDO  (sem alterações) -- */
+const container = document.querySelector('.background-bubbles');
+const numBubbles = 30;
+for (let i = 0; i < numBubbles; i++) {
+  const bubble = document.createElement('div');
+  bubble.className = 'bubble';
+  const size = Math.random() * 20 + 10;
+  bubble.style.width = bubble.style.height = `${size}px`;
+  bubble.style.left = `${Math.random() * 100}vw`;
+  const duration = Math.random() * 20 + 10;
+  const delay = Math.random() * 10;
+  bubble.style.animationDuration = `${duration}s`;
+  bubble.style.animationDelay = `${delay}s`;
+  container.appendChild(bubble);
+}
+</script>
+
+</body>
+</html>

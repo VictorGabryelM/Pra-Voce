@@ -1,0 +1,649 @@
+body {
+    background-color: #e59595;
+    color: #fff;
+    font-family: "Edu NSW ACT Hand Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+
+* {
+  /*outline: 1px solid red;*/
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+div {
+    height: 100vh;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+.button {
+    margin-top: -5px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+/* From Uiverse.io by catraco */ 
+.btn-class-name {
+    --primary: 255, 90, 120;
+    --secondary: 150, 50, 60;
+    width: 60px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    outline: 10px solid rgb(var(--primary), .5);
+    border-radius: 100%;
+    position: relative;
+    transition: .3s;
+  }
+  
+  .btn-class-name .back {
+    background: rgb(var(--secondary));
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-class-name .front {
+    background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+    box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+    border-radius: 100%;
+    position: absolute;
+    border: 1px solid rgb(var(--secondary));
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: inherit;
+    transform: translateY(-15%);
+    transition: .15s;
+    color: rgb(var(--secondary));
+  }
+  
+  .btn-class-name:active .front {
+    transform: translateY(0%);
+    box-shadow: 0 0;
+  }
+
+.box {
+  position: relative;
+  margin: 0%;
+  top: 0%;
+}
+.head img {
+  position: relative;
+  opacity: 0.43;
+  width: 60%;
+  top: -85px;
+}
+.head {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 10px;
+  top: 50px;
+  flex-direction: column;
+  align-items: center;
+}
+.head .title {
+  color: #b83263; /* rosa escuro elegante */
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 0 1rem;
+  animation: fadeIn 2s ease-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.box .img {
+    position: relative;
+    display: flex;
+    width: 65%;
+    height: auto;
+    border-radius: 15px;
+    margin-top: 21%;
+    margin-left: 3%;
+    z-index: 2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+    height: auto;
+}
+.box .back {
+    position: relative;
+    top: 28%;
+    left: 5%;
+    background-color: #ed4e70;
+    width: 140px;
+    height: 180px;
+    border-radius: 15px;
+    opacity: 0.70;
+    z-index: 1;
+}
+.box .bolinha {
+    position: relative;
+    background-color: #ed4e70;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 3;
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    left: 63%;
+}
+
+.box .back-text {
+  position: relative;
+  background-color: #ed4e70;
+  width: 190px;
+  height: 290px;
+  border-radius: 15px;
+  opacity: 0.60;
+  top: -90px;
+  left: 40%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.box .music-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  padding: 10px;
+  text-align: left;
+}
+.box .musical-notes {
+  position: relative;
+  width: 20%;
+  height: auto;
+  opacity: 0.4;
+  top: -4%;
+  left: 75%;
+}
+.box .mn1  { top: 12%;   left: 5%; transform: rotate(-30deg); }
+.box .mn2  { top: 26%;   left: 33%; transform: rotate(20deg); }
+.box .mn3  { top: 15%;   left: -15%; width: 30%; height: auto; opacity: 0.70; }
+
+.box .corazon {
+  position: relative;
+  opacity: 0.43;
+  width: 100%;
+  top: -80%;
+  left: -90%;
+  transform: rotate(-40deg);
+}
+.box .back-video {
+  /*outline: 2px solid rgb(0, 38, 255);*/
+  position: relative;
+  height: 400px;
+  top: -30px;
+}
+.box .back-video .video {
+  position: relative;
+  width: 70%;
+  height: auto;
+  top: -40%;
+  left: -10%;
+  z-index: 2;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  height: auto;
+}
+
+
+.box .back-video .back {
+    position: relative;
+    top: 3%;
+    left: 20%;
+    background-color: #ed4e70;
+    width: 170px;
+    height: 200px;
+    border-radius: 15px;
+    opacity: 0.50;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.box .comment {
+  position: relative;
+  background-color: #ed4e70;
+  width: 190px;
+  height: 290px;
+  border-radius: 15px;
+  opacity: 0.7;
+  top: -35%;
+  left: 5%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.box .back-video .corazon {
+  position: relative;
+  opacity: 0.43;
+  width: 50%;
+  top: -100%;
+  left: 20%;
+  transform: rotate(20deg);
+}
+
+.box .comment-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 15px;
+}
+.box .photo {
+  /*outline: 1.5px solid rgb(16, 204, 179);*/
+  height: 300px;
+}
+.box .photo .back {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    background-color: #ed4e70;
+    width: 170px;
+    height: 200px;
+    border-radius: 15px;
+    opacity: 0.50;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.box .photo .corazon {
+  position: relative;
+  opacity: 0.43;
+  width: 80%;
+  top: -85%;
+  left: -25%;
+  transform: rotate(-40deg);
+}
+
+.box .photo .photo-img {
+  position: relative;
+  width: 65%;
+  border-radius: 15px;
+  top: 0%;
+  left: 10%;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.box .unravel {
+  /*outline: 1px solid rgb(86, 148, 68);*/
+  height: 630px;
+}
+.box .unravel .corazon {
+  position: relative;
+  opacity: 0.43;
+  width: 40%;
+  top: -50%;
+  left: 45%;
+  transform: rotate(25deg);
+}
+.box .unravel .txt {
+  position: relative;
+  width: 50%;
+  top: -10%;
+  left: -50%;
+  transform: rotate(-25deg);
+}
+.box .unravel .img {
+  position: relative;
+  width: 45%;
+  border-radius: 15px;
+  top: -24%;
+  left: 8%;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.box .unravel .back {
+  position: relative;
+  top: 27%;
+  left: 5%;
+  background-color: #ed4e70;
+  width: 200px;
+  height: 170px;
+  border-radius: 15px;
+  opacity: 0.50;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.box .unravel .back-text {
+  position: relative;
+  background-color: #ed4e70;
+  width: 190px;
+  height: 260px;
+  border-radius: 15px;
+  opacity: 0.7;
+  top: -45%;
+  left: 47%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 100%;
+}
+
+.box .unravel .back-text .text {
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 15px;
+}
+.box .together {
+  height: 300px;
+}
+.box .together .back {
+  position: relative;
+  top: 22%;
+  left: 2%;
+  background-color: #ed4e70;
+  width: 220px;
+  height: 170px;
+  border-radius: 15px;
+  opacity: 0.50;
+  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.box .together img {
+  position: relative;
+  width: 45%;
+  border-radius: 15px;
+  top: -45%;
+  left: -20%;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.box .invite {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+}
+.box .invite .blackbox {
+  position: relative;
+  top: 20px;
+  display: flex;
+  width: 300px;
+  height: 200px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: rgb(22, 22, 22);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.box .invite h1 {
+  margin: 25px;
+  font-size: 12px;
+  display: flex;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Overlay */
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagem ampliada */
+.image-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+}
+
+/* Botão de fechar */
+.image-overlay .close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  z-index: 1000;
+}
+
+.image-overlay .close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.image-overlay .overlay-text {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  border-radius: 12px;
+  width: 150px;
+  height: 25px;
+  text-align: center;
+}
+
+.background-bubbles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none; /* Não atrapalha interações */
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ed4e70; /* Rosa */
+  opacity: 0.4;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.bolinha {
+    position: absolute;
+    background-color: #ed4e70;
+    border-radius: 50%;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* Tamanhos menores */
+  .bolinha.pequena {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .bolinha.grande {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Posições individuais */
+.b1  { top: 5%;   left: 10%; }
+.b2  { top: 20%;  left: 60%; }
+.b3  { top: 35%;  left: 30%; }
+.b4  { top: 50%;  left: 80%; }
+.b5  { top: 65%;  left: 15%; }
+.b6  { top: 75%;  left: 50%; }
+.b7  { top: 85%;  left: 25%; }
+.b8  { top: 40%;  left: 90%; }
+.b9  { top: 10%;  left: 70%; }
+.b10 { top: 55%;  left: 5%; }
+
+.image-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-overlay img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.overlay-text {
+  color: white;
+  margin-top: 16px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* From Uiverse.io by absoluteSTrange */ 
+.box .invite .blackbox .buttons button {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(255, 56, 86);
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.box .invite .blackbox .buttons button:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.box .invite .blackbox .buttons button:active {
+  background-color: rgb(255, 56, 86);
+  /*50, 168, 80*/
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+footer.notas-finais {
+  max-width: 700px;
+  margin: 100px auto 40px;
+  padding: 24px;
+  background-color: #fff0f5;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', 'Dancing Script', cursive;
+  text-align: left;
+  color: #b83263;
+  animation: fadeIn 1.5s ease-in;
+}
+
+footer.notas-finais h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #b83263;
+}
+
+footer.notas-finais p {
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+footer.notas-finais .assinatura {
+  font-style: italic;
+  text-align: right;
+  margin-top: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+footer.notas-finais .privado {
+  font-size: 0.9rem;
+  color: #a44e67;
+  font-style: italic;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
