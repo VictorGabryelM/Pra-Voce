@@ -398,12 +398,12 @@ div {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   background-color: rgb(22, 22, 22);
   align-items: center;
-  justify-content: center;
+  justify-items: center;
   flex-direction: column;
 }
 .box .invite h1 {
-  margin: 25px;
-  font-size: 12px;
+  margin: 20px;
+  font-size: 18px;
   display: flex;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -624,11 +624,13 @@ footer.notas-finais h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #b83263;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 footer.notas-finais p {
   margin: 0.8rem 0;
   line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 footer.notas-finais .assinatura {
@@ -639,8 +641,10 @@ footer.notas-finais .assinatura {
   font-size: 1.2rem;
 }
 
-footer.notas-finais .privado {
-  font-size: 0.9rem;
+footer.notas-finais .credits {
+  position: relative;
+  top: 10px;
+  font-size: 0.7rem;
   color: #a44e67;
   font-style: italic;
   margin-top: 1rem;
