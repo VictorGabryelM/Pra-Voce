@@ -135,6 +135,16 @@ function abrirOverlay(tipo, dados = {}) {
       video.controls = true;
       video.autoplay = true;
       video.loop = true;
+
+      // AJUSTE DE TAMANHO DO VÍDEO
+      video.style.width = "80vw";
+      video.style.maxWidth = "400px";
+      video.style.height = "auto";
+      video.style.borderRadius = "12px";
+      video.style.boxShadow = "0 0 20px rgba(0,0,0,0.5)";
+      video.style.display = "block";
+      video.style.margin = "40px auto";
+
       overlay.appendChild(video);
       break;
     }
@@ -169,13 +179,12 @@ document.querySelector('.photo-img').addEventListener('click', function () {
   abrirOverlay('imagem', { src: this.src, audio });
   audio.currentTime = 0;
   audio.play().catch(()=>{});
-  
 });
 
 /* --------------- NOVOS GATILHOS -------------------- */
 // 3) Unravel → vídeo
 document.querySelector('.unravel .img').addEventListener('click', function () {
-  abrirOverlay('video', { src: 'img/un.mp4' }); // troque pelo caminho real
+  abrirOverlay('video', { src: 'img/un.mp4' });
 });
 
 // 4) Together → imagem ampliada
@@ -183,7 +192,7 @@ document.querySelector('.together img').addEventListener('click', function () {
   abrirOverlay('imagem', { src: this.src });
 });
 
-/* -------------- BOLHAS DE FUNDO  (sem alterações) -- */
+/* -------------- BOLHAS DE FUNDO (sem alterações) -- */
 const container = document.querySelector('.background-bubbles');
 const numBubbles = 30;
 for (let i = 0; i < numBubbles; i++) {
@@ -198,7 +207,14 @@ for (let i = 0; i < numBubbles; i++) {
   bubble.style.animationDelay = `${delay}s`;
   container.appendChild(bubble);
 }
+window.addEventListener('DOMContentLoaded', () => {
+  if (!localStorage.getItem('avisoExibido')) {
+    alert('👀 Dica: Clique nas imagens... tem uma surpresa te esperando!');
+    localStorage.setItem('avisoExibido', 'true');
+  }
+});
 </script>
+
 
 </body>
 </html>
